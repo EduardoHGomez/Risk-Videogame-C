@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "Risk_videogame/risk_headers.h"
+#include "risk_headers.h"
 
 #define ROJO  "\x1b[41m"                         
 #define CYAN  "\x1b[46m"        
