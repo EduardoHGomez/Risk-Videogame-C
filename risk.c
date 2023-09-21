@@ -313,7 +313,7 @@ tablero_risk datos_jugadores(tablero_risk mapa){
     short cantidad;
     char color_jugador[10];
     //Ingresar cantidad de jugadores
-    printf("Amount of players? (2-4)");
+    printf("Ingrese la cantidad de jugadores(2-4): ");
     scanf("%d", &cantidad);
     mapa.cantidad_jugadores = cantidad;
     
@@ -361,7 +361,7 @@ tablero_risk posicionar_jugadores(tablero_risk mapa){
         for (int j = 0; j < 2; j++) //2 porque es la cantidad de territorios que puede elegir
         {
             mapa = imprimir_tablero(mapa);
-            printf("Ingrese la posición %d del jugador %d (1-8): ", j+1, i+1);
+            printf("Ingrese la posicion %d del jugador %d (1-8): ", j+1, i+1);
             scanf(" %d", &numero_posicion);
             //INGRESAR NUMEROS DISTINTOS
             mapa.jugadores[i].territorios_jugador[numero_posicion-1] = 1; //Almacena la cantidad de territorios que tiene
@@ -523,7 +523,7 @@ tablero_risk atacar(tablero_risk mapa){
             
             if (dado_izquierdo > dado_derecho)
             {
-                printf("\n\t\tJugador %d GANÓ, jugador %d pierde 1 soldado\n", jugador_ataca+1, jugador_defensa+1);
+                printf("\n\t\tJugador %d GANO, jugador %d pierde 1 soldado\n", jugador_ataca+1, jugador_defensa+1);
                 mapa.jugadores[jugador_defensa].soldados -= 1;
                 mapa.jugadores[jugador_ataca].soldados += 1;
 
