@@ -24,8 +24,8 @@ void pantalla_principal(){
     printf("\n\t\t\t| '--------------' || '--------------' || '--------------' || '--------------' |");
     printf("\n\t\t\t '----------------'  '----------------'  '----------------'  '----------------' ");
     printf("\n\n\t\t\t\t\t\t _______________________");
-    printf("\n\t\t\t\t\t\t|\t1.- Jugar\t|");
-    printf("\n\t\t\t\t\t\t|\t2.- Salir\t|");
+    printf("\n\t\t\t\t\t\t|\t1.- Play\t|");
+    printf("\n\t\t\t\t\t\t|\t2.- Leave\t|");
     printf("\n\t\t\t\t\t\t|_______________________|");
 }
 
@@ -137,7 +137,7 @@ int main(){
     while (exit == 0){
         printf(BORRAR);
         pantalla_principal();
-        printf("\n\n\t\t\tElige una opción: ");
+        printf("\n\n\t\t\tChoose an option: ");
         scanf("%d", &opcion);
 
         crear_tablero(mapa.tablero_principal);
@@ -313,7 +313,7 @@ tablero_risk datos_jugadores(tablero_risk mapa){
     short cantidad;
     char color_jugador[10];
     //Ingresar cantidad de jugadores
-    printf("Ingrese la cantidad de jugadores(2-4): ");
+    printf("Amount of players? (2-4)");
     scanf("%d", &cantidad);
     mapa.cantidad_jugadores = cantidad;
     
